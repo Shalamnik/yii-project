@@ -34,9 +34,7 @@ tests/_support/_generated
 
 #user ingore
 views/site/
-views/layouts/
-controllers/SiteController
+controllers/SiteController.php
 models/ContactForm.php
 models/LoginForm.php
-models/UserForm.php
 models/User.php
