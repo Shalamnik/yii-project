@@ -9,7 +9,6 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\EntryForm;
 
 class SiteController extends Controller
 {
@@ -125,12 +124,5 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
-    }
-
-    public function actionClientsDb($message = "hello, user!")
-    {
-        return $this->render('clients', [
-            'message' => $message
-        ]);
     }
 }

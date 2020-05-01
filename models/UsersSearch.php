@@ -45,7 +45,13 @@ class UsersSearch extends Users
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
-            'query' => $query,
+            'query' => $query
+                ->innerJoinWith('billing')
+                ->where('billing.user_id = users.id')
+                ->orderBy('billing.payment DESC'),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
         ]);
 
         $this->load($params);
@@ -56,14 +62,14 @@ class UsersSearch extends Users
             return $dataProvider;
         }
 
-        // grid filtering conditions
-        $query->andFilterWhere([
-            'id' => $this->id,
-            'age' => $this->age,
-            'phone' => $this->phone,
-        ]);
+        // // grid filtering conditions
+        // $query->andFilterWhere([
+        //     'id' => $this->id,
+        //     'age' => $this->age,
+        //     'phone' => $this->phone,
+        // ]);
 
-        $query->andFilterWhere(['like', 'firstname', $this->firstname]);
+        // $query->andFilterWhere(['like', 'firstname', $this->firstname]);
 
         return $dataProvider;
     }

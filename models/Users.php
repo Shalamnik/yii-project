@@ -54,8 +54,8 @@ class Users extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getBillings()
+    public function getBilling()
     {
-        return $this->hasMany(Billing::className(), ['user_id' => 'id']);
+        return $this->hasOne(Billing::className(), ['user_id' => 'id']);
     }
 }

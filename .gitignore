@@ -31,3 +31,12 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+#user ingore
+views/site/
+views/layouts/
+controllers/SiteController
+models/ContactForm.php
+models/LoginForm.php
+models/UserForm.php
+models/User.php
