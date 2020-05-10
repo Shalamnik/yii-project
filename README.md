@@ -8,7 +8,7 @@
 In this project realized simple **users-with-payments** list:
 
 * two tables in MySQL database: *users* and *billing*;
-    * models for tables (models/{Users.php, UsersSearch.php, Billing.php);
+    * models for tables (models/{Users.php, UsersSearch.php, Billing.php});
 * without Gii generator *(controllers/ClientsController, views/clients)*;
 * with Gii generator and Gridviews widget *(controllers/UsersContorller, views/users)*.
 
